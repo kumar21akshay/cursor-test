@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .memory-game {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .card {
+            aspect-ratio: 1;
+            background-color: #2c3e50;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: white;
+            transition: transform 0.3s;
+        }
+        .card.flipped {
+            background-color: #3498db;
+            transform: rotateY(180deg);
+        }
+        .game-info {
+            text-align: center;
+            margin: 20px;
+            font-size: 1.2em;
+        }
+        .restart-btn {
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        .restart-btn:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="game-info">
+        <h1>Memory Card Game</h1>
+        <p>Moves: <span id="moves">0</span></p>
+        <button class="restart-btn" onclick="restartGame()">Restart Game</button>
+    </div>
+    <div class="memory-game" id="game-board"></div>
+    <script src="memory.js"></script>
+</body>
+</html> 
