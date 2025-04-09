@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake Game - RC Gaming Centre</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Snake Game</h1>
+        <div id="nameForm" class="name-form">
+            <h2>Enter Your Name</h2>
+            <input type="text" id="playerName" placeholder="Your name..." maxlength="20">
+            <button id="startGameBtn" class="game-button">
+                <span>Start Game</span>
+                <div class="button-glow"></div>
+            </button>
+        </div>
+        <div id="gameContent" class="game-content" style="display: none;">
+            <div class="game-area">
+                <canvas id="gameCanvas" width="400" height="400"></canvas>
+                <div class="score-container">
+                    <p>Player: <span id="currentPlayer">-</span></p>
+                    <p>Score: <span id="score">0</span></p>
+                    <p>High Score: <span id="highScore">0</span></p>
+                </div>
+                <div class="instructions">
+                    <p>Use arrow keys to control the snake</p>
+                    <p>Eat the food to grow and increase your score</p>
+                    <p>Avoid hitting the walls or yourself!</p>
+                </div>
+            </div>
+            <div class="score-history">
+                <h2>Score History</h2>
+                <table id="scoreTable">
+                    <thead>
+                        <tr>
+                            <th>Player</th>
+                            <th>Date</th>
+                            <th>Score</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <a href="index.html" class="game-button" style="margin-top: 20px;">
+            <span>Back to Home</span>
+            <div class="button-glow"></div>
+        </a>
+    </div>
+    <script src="snake.js"></script>
+</body>
+</html> 
